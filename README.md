@@ -15,4 +15,4 @@
 Кишишев Владислав Алексеевич, группа ИТ2202.
 
 ## Заключение
-![Yeah, so](images/yeah,_so.gif)
+![[Yeah, so](https://github.com/Bra1nButter/MobileDevCourse_KubSAU/blob/work/images/yeah%2C%20so.gif)
