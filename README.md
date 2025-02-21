@@ -15,4 +15,4 @@
 Кишишев Владислав Алексеевич, группа ИТ2202.
 
 ## Заключение
-![Yeah, so](images/yeah_so.gif)
+![Yeah, so](images/yeah,_so.gif)
