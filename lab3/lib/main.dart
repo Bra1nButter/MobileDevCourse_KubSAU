@@ -40,8 +40,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _decreaseCounter(){
     setState(() {
-      if (_counter >0)
+      if (_counter >0){
       _counter--;
+      }
+    });
+  }
+
+  void _resetCounter(){
+    setState(() {
+      _counter = 0;
     });
   }
 
@@ -54,23 +61,46 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Кнопка была избита раз:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+    const Text('Кнопка избита раз:'),
+    Text(
+    '$_counter',
+    style: Theme.of(context).textTheme.headlineMedium,
+    ),
+    const SizedBox(height: 21),
+    const SizedBox(),
+    Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      InkWell(onTap: _decreaseCounter, borderRadius: BorderRadius.circular(8),
+    child: Container(
+    padding: EdgeInsets.all(12),
+    decoration: BoxDecoration(color: Colors.red, borderRadius: BorderRadius.circular(8)),
+    child: Text('Гладить')
+    ),
+    ),
+    SizedBox(width: 16),
+
+    InkWell(onTap: _increaseCounter, borderRadius: BorderRadius.circular(8),
+    child: Container(
+    padding: EdgeInsets.all(12),
+    decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(8)),
+    child: Text('Избить'),
+    ),
+    ),
+    ],
+    ),
+    TextButton(
+        onPressed: _resetCounter,
+        style: TextButton.styleFrom(
+            foregroundColor: Colors.blueGrey,
+          backgroundColor: Colors.cyan.shade300
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _increaseCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+        child: const Text(r"¯\_( ͡° ͜ʖ ͡°)_/¯")),
+    ],
+    ),
+    ),
     );
   }
 }
