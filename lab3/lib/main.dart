@@ -95,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _resetCounter,
         style: TextButton.styleFrom(
             foregroundColor: Colors.blueGrey,
-          backgroundColor: Colors.cyan.shade300
+          backgroundColor: Colors.cyan.shade300,
         ),
         child: const Text(r"¯\_( ͡° ͜ʖ ͡°)_/¯")),
     ],
